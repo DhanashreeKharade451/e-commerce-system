@@ -1,5 +1,10 @@
-function calculateDiscount(price, percent) {
-  return +(price * (percent / 100)).toFixed(2);
+
+export function calculateDiscount(price, discountPercentage) {
+  return (price * discountPercentage) / 100;
 }
 
-module.exports = { calculateDiscount };
+
+
+// export function calculateDiscount(price, discountPercentage) {
+//   return (price * discountPercentage) / 100;
+// }

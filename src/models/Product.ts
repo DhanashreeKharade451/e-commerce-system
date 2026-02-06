@@ -1,21 +1,28 @@
-import { calculateDiscount } from "../utils/discountCalculator";
-import { calculateTax } from "../utils/taxCalculator";
-import { fetchAPIData } from "../services/apiService";
-import {fetchAPIData} from "../services/apiService";
+import { calculateDiscount } from "../utils/discountCalculator.ts";
+import { calculateTax } from "../utils/taxCalculator.ts";
 
-class Product {
+//import {fetchAPIData} from "../services/apiService";
+
+export class Product {
     id: number;
     title: string;
-    description: string;
+  
     price: number;
     discountPercentage: number;
-    rating: number;
-    stock: number;
-    brand: string;
+    
+    
     category: string;
-    thumbnail: string;
-    images: string[];
-}   
+  
+   
+    constructor(id: number, title: string, price: number, discountPercentage: number, category: string ){
+        this.id = id;
+        this.title = title;
+        this.price =price;
+        this.discountPercentage = discountPercentage;
+        this.category = category;
+    }
+    
+  
 
 displayDetails() {
     console.log(`Product: ${this.title}, Price: $${this.price}`);
@@ -31,3 +38,4 @@ getPriceWithTax() {
     return this.price + tax;
 }
 
+} 

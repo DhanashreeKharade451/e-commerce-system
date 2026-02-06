@@ -1,5 +1,5 @@
 
- async function fetchAPIData() {
+export async function fetchAPIData() {
     try {
         const response = await fetch('https://dummyjson.com/products');
         const data = await response.json();

@@ -8,5 +8,6 @@ fetchItem(1)
      const newProduct = new Product(data.id, data.title, data.price, data.discountPercentage,data.category);
      newProduct.displayDetails();
      console.log(newProduct.getPriceWithDiscount());
+     console.log(newProduct.getPriceWithTax())
 
 })
